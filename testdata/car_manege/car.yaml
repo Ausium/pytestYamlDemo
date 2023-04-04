@@ -1,0 +1,14 @@
+用户登录成功1:
+  url: api/v1/pub/login/3rd
+  method: POST
+  remark: 登录
+  is_run: True
+  data:
+      ID: chenzanxu
+      secret: 25d55ad283aa400af464c76d713c07ad
+      type: default
+  expected:
+    response:
+      title: 正在上映的电影-上海
+      count: 10
+      start: 0
