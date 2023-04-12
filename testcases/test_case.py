@@ -9,7 +9,7 @@ from utils.allure_ import allure_title,allure_step_no
 from utils import logger
 from utils.read_file import ReadFile
 from utils.get_path import testdata_dir
-from utils.requests import mq
+from utils.case_run import case_run
 
 
 # path = os.path.join(testdata_dir,"login","login.yaml")
@@ -19,15 +19,11 @@ from utils.requests import mq
 
 @pytest.mark.parametrize("case_data",ReadFile.read_case())
 def test_main(case_data):
-    print("case_data is {}".format(case_data))
-    mq.send_requests(case_data["url"],case_data["method"],case_data["data"])
-    # logger.info("")
+    # print("case_data is {}".format(case_data))
+    case_run(case_data)
     case_file_location = ReadFile.case_file_location(case_data['case_title'])
     print("该用例属于{}文件".format(case_file_location))
     allure_title(case_data['case_title'])
-    # print("========================")
-    # resp = mq.send_requests(data[0][1]["path"],data[0][1]["method"],data[0][1]["data"])
-    # print(resp.json())
 
 
 

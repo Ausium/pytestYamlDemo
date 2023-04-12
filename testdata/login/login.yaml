@@ -12,6 +12,11 @@
       title: 正在上映的电影-上海
       count: 10
       start: 0
+  extract_key:
+    access_token: $.data.access_token
+
+
+
 
 # ---
 # tests:

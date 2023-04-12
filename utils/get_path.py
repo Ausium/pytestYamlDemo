@@ -16,6 +16,9 @@ log_dir = os.path.join(basedir, "outputs", "logs")
 # 报告路径
 report_dir = os.path.join(basedir, "outputs", "reports")
 
+#用例执行结果路径
+execute_result_dir = os.path.join(basedir, "outputs", "execute_result")
+
 if __name__ == "__main__" :
     basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     conf_dir = os.path.join(basedir, "config")
