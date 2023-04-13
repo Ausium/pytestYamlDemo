@@ -24,7 +24,6 @@ def replace_case(case_dict):
 
     # 第四步：将完全替换后的一整个测试用例，转换回字典
     new_case_data = eval(case_str)
-    print("new_case_data is {}".format(new_case_data))
     return new_case_data
 
 def extract_data_from_response(extract_epr, response_dict):

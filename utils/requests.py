@@ -4,6 +4,7 @@ import pytest
 import allure
 from utils.myConf import MyConf
 from utils.get_path import conf_dir
+from utils.extract_data import extract_data
 
 class MyRequests:
 
@@ -16,23 +17,21 @@ class MyRequests:
         #读取配置文件中的server
         self.base_url = MyConf(os.path.join(conf_dir,"conf.ini")).get("server","host")
 
-    def send_requests(self,api_url,method,data,token=None):
+    def send_requests(self,api_url,method,data):
         #处理请求头
-        self.__deal_header(token)
+        self.__deal_header()
 
         #处理请求url
         self.__deal_url(api_url)
-
-
         if method.upper() == "GET":
             resp = requests.request(method,self.url,params=data,headers=self.headers)
         else: 
             resp = requests.request(method,self.url,json=data,headers=self.headers)
         return resp
 
-    def __deal_header(self,token=None):
-        if token:
-            self.headers["Authorization"] = "Bearer {}".format(token)
+    def __deal_header(self):
+        if hasattr(extract_data,"access_token"):
+            self.headers["Authorization"] = "Bearer {}".format(extract_data.access_token)
 
     def __deal_url(self,api_url):
         url = self.base_url + api_url

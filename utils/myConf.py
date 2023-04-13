@@ -1,5 +1,3 @@
-
-
 from configparser import ConfigParser
 
 class MyConf(ConfigParser):

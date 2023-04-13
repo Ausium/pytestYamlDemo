@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
-@time    : 2022/6/10 
-@Author  : LL
+@time    : 2023/4/12 
+@Author  : zzz
 @File    : config.py
 '''
 
