@@ -13,7 +13,6 @@ def case_run(case_data):
         extract_data_from_response(replace_case_data["extract_key"],response_data.json())
     # print(dir(extract_data))
     if hasattr(extract_data,"access_token"):
-        # print(extract_data.access_token)
         pass
     else:
         print("==================该属性不存在==============")
