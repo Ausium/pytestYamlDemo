@@ -4,6 +4,7 @@ from datetime import datetime
 import pytest
 from _pytest import terminal
 from utils.get_path import execute_result_dir
+from utils.send_email import send_case_result_email
 
  
 def pytest_terminal_summary(terminalreporter, exitstatus, config):
@@ -34,4 +35,18 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         fp.write("Successful_rate: %.2f%%;\n" % successful)
         fp.write("Running_time: %s;\n" % now_time)
         fp.write("Totla_time: %.2f s;\n" % duration)
-
+    subject = '自动化用例执行结果'
+    res = f"""
+    <h1>自动化用例执行结果如下:</h1>
+    <div style="font-weight: bold; font-size:14px;">
+        <p>Total: {total};</p>
+        <p>Passed: {passed};</p>
+        <p>Failed: {failed};</p>
+        <p>Errored: {error};</p>
+        <p>Skiped: {skipped};</p>
+        <p>Successful_rate: {successful}%;</p>
+        <p>Running_time: {now_time};</p>
+        <p>Totla_time: {duration}s;</p>
+    </div>
+    """
+    send_case_result_email.send_email(subject,res)

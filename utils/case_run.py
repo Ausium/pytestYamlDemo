@@ -7,7 +7,6 @@ def case_run(case_data):
     replace_case_data = replace_case(case_data)
 
     response_data = mq.send_requests(replace_case_data["url"],replace_case_data["method"],replace_case_data["data"])
-    print("response_data is {}".format(response_data.json()))
     
     if replace_case_data.get("extract_key") is not None:
         extract_data_from_response(replace_case_data["extract_key"],response_data.json())

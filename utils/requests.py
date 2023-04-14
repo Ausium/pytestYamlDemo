@@ -6,7 +6,7 @@ from utils.myConf import MyConf
 from utils.get_path import conf_dir
 from utils.extract_data import extract_data
 
-class MyRequests:
+class MyRequests():
 
     #初始化方法
     def __init__(self):
@@ -36,7 +36,9 @@ class MyRequests:
         # allure.step('请求地址为：{}'.format(url))
         print(url)
         self.url = url
-
+    @classmethod
+    def request_log(cls):
+        pass
 mq = MyRequests()
 
 if __name__ == '__main__':
