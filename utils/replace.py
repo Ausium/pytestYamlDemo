@@ -5,6 +5,7 @@ sys.path.append(os.getcwd())
 import re
 import jsonpath
 from utils.extract_data import extract_data,ExtractData
+from utils.logger import logger
 
 def replace_case(case_dict):
     # 第一步，把整个测试用例转换成字符串
@@ -12,7 +13,7 @@ def replace_case(case_dict):
     # 第二步，利用正则表达式提取mark标识符
     regex = r'\${(.*?)}'
     to_be_replace_marks_list = re.findall(regex,case_str)
-
+    logger.info("提取的用例标识符:{}".format(to_be_replace_marks_list))
     # 第三步：遍历标识符mark，如果标识符是全局变量Data类的属性名，则用属性值替换掉mark
     if to_be_replace_marks_list:
         for mark in to_be_replace_marks_list:
@@ -20,6 +21,7 @@ def replace_case(case_dict):
             if hasattr(extract_data, mark):
                 # 使用全局变量Data类的mark属性值，去替换测试用例当中的${mark}
                 case_str = case_str.replace(f"${mark}", getattr(extract_data,mark))
+                logger.info("替换用例标识符,标识符值为:{}:{}".format(mark,setattr(extract_data,mark)))
 
     # 第四步：将完全替换后的一整个测试用例，转换回字典
     new_case_data = eval(case_str)

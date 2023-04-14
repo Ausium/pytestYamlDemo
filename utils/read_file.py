@@ -59,11 +59,10 @@ class ReadFile():
                         continue
                     if 'yaml' in i:
                         file_list.append('testdata/' + filename + '/' + i)
-                    
-        print(file_list)
         if exclude_file != []:
             for i in exclude_file:
                 file_list.remove(i)
+        
         return file_list
 
     @classmethod
@@ -78,7 +77,7 @@ class ReadFile():
     def read_case(cls):
         '''读取case下需要执行的用例文件并返回用例数据'''
         path_list = cls.file_execute_list()
-        print(path_list)
+        logger.info("执行的用例文件为:{}".format(path_list))
         case_data = {}
         for i in path_list:
             case_data.update(cls.read_yaml(i)) 

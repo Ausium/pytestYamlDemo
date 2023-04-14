@@ -21,17 +21,14 @@ import logging
 from utils.get_path import log_dir
 
 
-
 class MyLogger(Logger):
 
     def __init__(self):
-        # conf = MyConf("conf.ini")
-        # file = conf.get("log", "file")
-        # file = r"E:\InterfaceAuto\outputs\logs\api.log"
-        file = os.path.join(log_dir,"api.log")
+
+        file = os.path.join(log_dir,"case_execute.log")
         # 1、设置日志的名字、日志的收集级别
         # super().__init__(conf.get("log","name"), conf.get("log","level"))
-        super().__init__("py37_api", logging.INFO)
+        super().__init__("case_execute", logging.INFO)
 
         # 2、可以将日志输出到文件和控制台
 

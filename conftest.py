@@ -49,4 +49,4 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         <p>Totla_time: {duration}s;</p>
     </div>
     """
-    send_case_result_email.send_email(subject,res)
+    # send_case_result_email.send_email(subject,res)

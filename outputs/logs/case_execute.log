@@ -1,0 +1,5 @@
+2023-04-14 17:37:03,645 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-14 17:37:03,654 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 17:37:03,803 case_execute INFO test_case.py [line:22] 用例:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-14 17:37:03,806 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 17:37:03,884 case_execute INFO test_case.py [line:22] 用例:用户登录成功,该用例属于testdata/login/login.yaml文件
