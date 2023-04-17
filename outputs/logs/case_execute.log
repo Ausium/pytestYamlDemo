@@ -3,3 +3,117 @@
 2023-04-14 17:37:03,803 case_execute INFO test_case.py [line:22] 用例:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
 2023-04-14 17:37:03,806 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
 2023-04-14 17:37:03,884 case_execute INFO test_case.py [line:22] 用例:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-14 18:18:25,532 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-14 18:18:25,542 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 18:18:25,716 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-14 18:18:25,718 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 18:18:25,777 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-14 18:24:54,039 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-14 18:24:54,048 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 18:24:54,187 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-14 18:24:54,190 case_execute INFO replace.py [line:16] 提取的用例标识符:[]
+2023-04-14 18:24:54,245 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-14 18:26:34,819 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-14 18:26:34,828 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-14 18:26:35,015 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-14 18:26:35,018 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-14 18:26:35,097 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-14 18:27:20,868 case_execute INFO replace.py [line:17] 提取的用例标识符:['登录', 'phone']
+2023-04-14 18:27:31,597 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-14 18:27:31,607 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-14 18:27:31,762 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-14 18:27:31,765 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-14 18:27:31,858 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:22:24,563 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:22:24,578 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:22:24,821 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:22:59,986 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:22:59,996 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:23:00,233 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:23:25,233 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:23:25,243 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:23:25,422 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:24:20,693 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:24:20,703 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:24:20,876 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:24:39,347 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:24:39,357 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:24:39,508 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:24:39,583 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:24:39,584 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:24:39,584 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:24:39,590 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:34:08,934 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:34:08,943 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:34:09,116 case_execute INFO case_run.py [line:20] yaml用例框架不存在此assert_response_value字段!
+2023-04-17 14:34:09,119 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:34:09,121 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:34:09,204 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:34:09,205 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:34:09,205 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:34:09,210 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:39:53,055 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:39:53,065 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:39:53,235 case_execute INFO case_run.py [line:20] 该用例不存在assert_response_value字段!
+2023-04-17 14:39:53,237 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:39:53,240 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:40:44,438 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:40:44,448 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:40:44,556 case_execute INFO case_run.py [line:20] 该用例不存在assert_response_value字段!
+2023-04-17 14:40:44,559 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:40:44,561 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:40:44,659 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:40:44,659 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:40:44,660 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:40:44,665 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:41:01,804 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:41:01,814 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:41:01,907 case_execute INFO case_run.py [line:20] 该用例不存在assert_response_value字段!
+2023-04-17 14:41:01,910 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:41:01,913 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:41:01,988 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:41:01,989 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:41:01,989 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:41:01,995 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:41:55,620 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:41:55,631 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:41:55,866 case_execute INFO case_run.py [line:19] 该用例不存在assert_response_value字段!
+2023-04-17 14:41:55,869 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:41:55,871 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:41:55,941 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:41:55,942 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:41:55,943 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:41:55,948 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:42:13,483 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:42:13,493 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:42:13,590 case_execute INFO case_run.py [line:19] 该用例不存在assert_response_value字段!
+2023-04-17 14:42:13,593 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:42:13,595 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:42:13,662 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:42:13,663 case_execute INFO assertUtil.py [line:28] 比对结果为：
+True
+2023-04-17 14:42:13,663 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:42:13,668 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:42:22,515 case_execute INFO read_file.py [line:80] 执行的用例文件为:['testdata/car_manege/car.yaml', 'testdata/login/login.yaml']
+2023-04-17 14:42:22,525 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:42:22,671 case_execute INFO case_run.py [line:19] 该用例不存在assert_response_value字段!
+2023-04-17 14:42:22,673 case_execute INFO test_case.py [line:22] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
+2023-04-17 14:42:22,675 case_execute INFO replace.py [line:17] 提取的用例标识符:[]
+2023-04-17 14:42:22,752 case_execute INFO assertUtil.py [line:27] 比对2个值是否相等。
+2023-04-17 14:42:22,753 case_execute INFO assertUtil.py [line:28] 比对结果为：True
+2023-04-17 14:42:22,753 case_execute INFO assertUtil.py [line:38] 所有断言成功！
+2023-04-17 14:42:22,759 case_execute INFO test_case.py [line:22] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-04-17 14:45:26,161 case_execute INFO assertUtil.py [line:30] 比对2个值是否相等。
+2023-04-17 14:45:26,162 case_execute INFO assertUtil.py [line:31] 比对结果为：True
+2023-04-17 14:45:26,162 case_execute INFO assertUtil.py [line:41] 所有断言成功！
+2023-04-17 14:45:29,272 case_execute INFO assertUtil.py [line:30] 比对2个值是否相等。
+2023-04-17 14:45:29,272 case_execute INFO assertUtil.py [line:31] 比对结果为：True
+2023-04-17 14:45:29,272 case_execute INFO assertUtil.py [line:41] 所有断言成功！
+2023-04-17 14:45:53,830 case_execute INFO assertUtil.py [line:30] 比对2个值是否相等。
+2023-04-17 14:45:53,831 case_execute INFO assertUtil.py [line:31] 比对结果为：True
+2023-04-17 14:45:53,831 case_execute INFO assertUtil.py [line:41] 所有断言成功！

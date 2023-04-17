@@ -1,6 +1,8 @@
 from utils.requests import mq
 from utils.replace import replace_case, extract_data_from_response
 from utils.extract_data import extract_data
+from utils.assertUtil import RespondAssert
+from utils.logger import logger
 
 def case_run(case_data):
 
@@ -11,11 +13,11 @@ def case_run(case_data):
     if replace_case_data.get("extract_key") is not None:
         extract_data_from_response(replace_case_data["extract_key"],response_data.json())
     # print(dir(extract_data))
-    if hasattr(extract_data,"access_token"):
-        pass
+    if replace_case_data.get("assert_response_value") is not None:
+        RespondAssert().assert_response_value(replace_case_data["assert_response_value"],response_data.json())
     else:
-        print("==================该属性不存在==============")
-    assert  response_data.status_code == 200
+        logger.info("该用例不存在assert_response_value字段!")
+
 
     
 

@@ -13,6 +13,7 @@ def replace_case(case_dict):
     # 第二步，利用正则表达式提取mark标识符
     regex = r'\${(.*?)}'
     to_be_replace_marks_list = re.findall(regex,case_str)
+    print(to_be_replace_marks_list)
     logger.info("提取的用例标识符:{}".format(to_be_replace_marks_list))
     # 第三步：遍历标识符mark，如果标识符是全局变量Data类的属性名，则用属性值替换掉mark
     if to_be_replace_marks_list:
@@ -44,23 +45,21 @@ def extract_data_from_response(extract_epr, response_dict):
             setattr(ExtractData, key, str(result[0]))
 
 if __name__ == '__main__':
-    # case_str = {'id': 1, 'type': 'setup', 'title': '${登录}','phone':'${phone}','phone':'${phone}'}
-    # res = replace_case(case_str)
+    case_str = {'id': 1, 'type': 'setup', 'title': '${登录}','phone':'${phone}','phone':'${phone}'}
+    res = replace_case(case_str)
     # print(res)
     # print(dir(extract_data))
-    resp = {
-    "data": {
-        "access_token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMzNDI3OTEsImlhdCI6MTY4MDc1MDc5MSwibmJmIjoxNjgwNzUwNzkxLCJzdWIiOiJvd0hfSndJVGJmQ1VNUXVyMlQ2SEVlSTRZMl9BOjE4MTQ1ODQ1ODIwOmZhbHNlIn0.UYWzQKEptwE-HcNinOwmRXRSDDLR2GLtWM0HraIrMyQ3Tov8C-XRcFVoeW2HPoBOKh92AGDjH4h97hmd2dC70A",
-        "token_type": "Bearer",
-        "expires_at": 1683342791,
-        "phone": "18145845820"
-    },
-    "status": 1
-}
-    cases = {"access_token": "$.data.access_token"}
-    extract_data_from_response(cases,resp)
-    print(dir(extract_data))
-    print(extract_data.access_token)
+#     resp = {
+#     "data": {
+#         "access_token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODMzNDI3OTEsImlhdCI6MTY4MDc1MDc5MSwibmJmIjoxNjgwNzUwNzkxLCJzdWIiOiJvd0hfSndJVGJmQ1VNUXVyMlQ2SEVlSTRZMl9BOjE4MTQ1ODQ1ODIwOmZhbHNlIn0.UYWzQKEptwE-HcNinOwmRXRSDDLR2GLtWM0HraIrMyQ3Tov8C-XRcFVoeW2HPoBOKh92AGDjH4h97hmd2dC70A",
+#         "token_type": "Bearer",
+#         "expires_at": 1683342791,
+#         "phone": "18145845820"
+#     },
+#     "status": 1
+# }
+#     cases = {"access_token": "$.data.access_token"}
+#     extract_data_from_response(cases,resp)
 
 
 

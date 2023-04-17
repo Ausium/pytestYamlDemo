@@ -14,6 +14,15 @@
       start: 0
   extract_key:
     access_token: $.data.access_token
+  assert_response_value:
+  -
+    expr: $.status
+    expected: 1
+    type: assert_result
+
+
+
+    
 
 
 
