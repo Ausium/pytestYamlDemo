@@ -10,9 +10,9 @@ from utils.function import *
 
 def replace_case(case_data):
     #yaml文件中的函数处理
-    case_dict = replace_func(case_data)
-    
-    case_str = str(case_dict)
+    case_replace_data = replace_func(case_data)
+
+    case_str = str(case_replace_data)
     regex = r'\${(.*?)}'
     to_be_replace_marks_list = re.findall(regex,case_str)
     print(to_be_replace_marks_list)

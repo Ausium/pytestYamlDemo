@@ -1,9 +1,9 @@
 用例执行结果如下:
-Total: 3;
-Passed: 3;
+Total: 1;
+Passed: 1;
 Failed: 0;
 Errored: 0;
 Skiped: 0;
 Successful_rate: 100.00%;
-Running_time: 2023-04-27 14:33:10;
-Totla_time: 0.39 s;
+Running_time: 2023-04-27 18:06:55;
+Totla_time: 0.44 s;

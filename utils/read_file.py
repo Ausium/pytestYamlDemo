@@ -62,9 +62,13 @@ class ReadFile():
                         continue
                     if 'yaml' in i:
                         file_list.append('testdata/' + filename + '/' + i)
-        if exclude_file != []:
-            for i in exclude_file:
-                file_list.remove(i)
+
+        if exclude_file:
+            for exclude_item in exclude_file:
+                for item in file_list:
+                    if exclude_item in item:
+                        print("去除的文件是：{}".format(item))
+                        file_list.remove(item)
         return file_list
 
     @classmethod
@@ -85,10 +89,10 @@ class ReadFile():
         for i in path_list:
             case_module_name = i.split('testdata/')[1].split('/')[0]
             case_data.update(cls.read_yaml(i))
-            for case_key, case_value in case_data.items():
-                if case_value["is_run"] == True:
-                    case_value["case_title"] = case_key
-                    yield case_value                
+        for case_key, case_value in case_data.items():
+            if case_value["is_run"] == True:
+                case_value["case_title"] = case_key
+                yield case_value                
 
 
 if __name__ == "__main__" :
