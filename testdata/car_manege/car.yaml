@@ -6,11 +6,8 @@
   data:
       size: -1
       page: 1
-  expected:
-    response:
-      title: 正在上映的电影-上海
-      count: 10
-      start: 0
+
+
 # ---
 # tests:
 # - case: 登录成功

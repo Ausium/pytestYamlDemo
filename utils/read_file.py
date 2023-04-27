@@ -2,12 +2,15 @@ import os
 import sys
 sys.path.append(os.getcwd())
 
-from pathlib import Path
+
 import requests
 import yaml
+import allure
+from pathlib import Path
 from utils.get_path import testdata_dir
 from config.config import exclude_file, exclude_dir, Environment
 from utils.logger import logger
+from utils.allure_ import *
 
 
 class ReadFile():
@@ -62,7 +65,6 @@ class ReadFile():
         if exclude_file != []:
             for i in exclude_file:
                 file_list.remove(i)
-        
         return file_list
 
     @classmethod
@@ -71,6 +73,7 @@ class ReadFile():
         path = cls.project_directory + path
         with open(path, 'r', encoding='utf-8') as f:
                 content = yaml.load(f.read(), Loader=yaml.Loader)
+                # print("content is {}".format(content))
                 return content
 
     @classmethod
@@ -80,11 +83,12 @@ class ReadFile():
         logger.info("执行的用例文件为:{}".format(path_list))
         case_data = {}
         for i in path_list:
-            case_data.update(cls.read_yaml(i)) 
-        for case_key, case_value in case_data.items():
-            if case_value["is_run"] == True:
-                case_value["case_title"] = case_key
-            yield case_value                
+            case_module_name = i.split('testdata/')[1].split('/')[0]
+            case_data.update(cls.read_yaml(i))
+            for case_key, case_value in case_data.items():
+                if case_value["is_run"] == True:
+                    case_value["case_title"] = case_key
+                    yield case_value                
 
 
 if __name__ == "__main__" :

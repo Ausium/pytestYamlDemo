@@ -5,6 +5,7 @@ import pytest
 from _pytest import terminal
 from utils.get_path import execute_result_dir
 from utils.send_email import send_case_result_email
+from utils.get_path import report_dir
 
  
 def pytest_terminal_summary(terminalreporter, exitstatus, config):
@@ -49,4 +50,5 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         <p>Totla_time: {duration}s;</p>
     </div>
     """
-    # send_case_result_email.send_email(subject,res)
+    report_path = os.path.join(report_dir, "report.html")
+    # send_case_result_email.send_email(subject,res,report_path)

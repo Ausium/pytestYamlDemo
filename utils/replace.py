@@ -6,27 +6,42 @@ import re
 import jsonpath
 from utils.extract_data import extract_data,ExtractData
 from utils.logger import logger
+from utils.function import *
 
-def replace_case(case_dict):
-    # 第一步，把整个测试用例转换成字符串
+def replace_case(case_data):
+    #yaml文件中的函数处理
+    case_dict = replace_func(case_data)
+    
     case_str = str(case_dict)
-    # 第二步，利用正则表达式提取mark标识符
     regex = r'\${(.*?)}'
     to_be_replace_marks_list = re.findall(regex,case_str)
     print(to_be_replace_marks_list)
     logger.info("提取的用例标识符:{}".format(to_be_replace_marks_list))
-    # 第三步：遍历标识符mark，如果标识符是全局变量Data类的属性名，则用属性值替换掉mark
+    
     if to_be_replace_marks_list:
         for mark in to_be_replace_marks_list:
-            # 如果全局变量Data类有mark这个属性名
             if hasattr(extract_data, mark):
                 # 使用全局变量Data类的mark属性值，去替换测试用例当中的${mark}
                 case_str = case_str.replace(f"${mark}", getattr(extract_data,mark))
                 logger.info("替换用例标识符,标识符值为:{}:{}".format(mark,setattr(extract_data,mark)))
 
-    # 第四步：将完全替换后的一整个测试用例，转换回字典
+    #将完全替换后的一整个测试用例，转换回字典
     new_case_data = eval(case_str)
     return new_case_data
+
+def replace_func(data):
+    """
+    data: 读取出的yaml用例
+    函数用来处理yaml文件中的函数
+    """
+    if isinstance(data, dict):
+        return {k: replace_func(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [replace_func(item) for item in data]
+    elif isinstance(data, str) and "random" in data:
+        return data.replace(data, str(eval(str(data))))
+    else:
+        return data
 
 def extract_data_from_response(extract_epr, response_dict):
     """
@@ -45,8 +60,9 @@ def extract_data_from_response(extract_epr, response_dict):
             setattr(ExtractData, key, str(result[0]))
 
 if __name__ == '__main__':
-    case_str = {'id': 1, 'type': 'setup', 'title': '${登录}','phone':'${phone}','phone':'${phone}'}
+    case_str = {'id': 1, 'type': 'setup', 'title': random_number(10),'phone':'${phone}','phone':'${phone}'}
     res = replace_case(case_str)
+    print(res)
     # print(res)
     # print(dir(extract_data))
 #     resp = {

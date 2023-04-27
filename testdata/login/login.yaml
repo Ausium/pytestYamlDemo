@@ -1,24 +1,22 @@
 用户登录成功:
   url: api/v1/pub/login/3rd
   method: POST
-  remark: 登录
+  remark: random_number(10)
   is_run: True
   data:
-      ID: chenzanxu
-      secret: 25d55ad283aa400af464c76d713c07ad
-      type: default
-  expected:
-    response:
-      title: 正在上映的电影-上海
-      count: 10
-      start: 0
+      {
+    "ID": "chenzanxu",
+    "secret": "25d55ad283aa400af464c76d713c07ad",
+    "type": random_number(10)
+}
   extract_key:
     access_token: $.data.access_token
   assert_response_value:
   -
     expr: $.status
     expected: 1
-    type: assert_result
+    assert_type: equals_assert
+
 
 
 
