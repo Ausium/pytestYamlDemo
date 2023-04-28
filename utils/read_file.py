@@ -50,26 +50,26 @@ class ReadFile():
         :param exclude_file: 要排除的文件（case目录下所有文件）例子：case/ctms/ctms_main.yaml   case/waybill.yaml list格式
         :return: 获取case下的所有用例文件列表,最多支持二级目录,通用排除文件返回最终要执行的用例文件
         '''
-        file_list = []
+        execute_file_list = []
         # case_path = cls.project_directory + 'testdata'
         case_path = testdata_dir
         for filename in os.listdir(case_path):
             if 'yaml' in filename:
-                file_list.append('case/' + filename)
+                execute_file_list.append('case/' + filename)
             else:
                 for i in os.listdir(case_path + '/' + filename):
                     if filename in exclude_dir:
                         continue
                     if 'yaml' in i:
-                        file_list.append('testdata/' + filename + '/' + i)
-
+                        execute_file_list.append('testdata/' + filename + '/' + i)
+        #去除执行用例case下的文件
         if exclude_file:
             for exclude_item in exclude_file:
-                for item in file_list:
+                for item in execute_file_list:
                     if exclude_item in item:
-                        print("去除的文件是：{}".format(item))
-                        file_list.remove(item)
-        return file_list
+                        print("排除的执行文件是：{}".format(item))
+                        execute_file_list.remove(item)
+        return execute_file_list
 
     @classmethod
     def read_yaml(cls, path):

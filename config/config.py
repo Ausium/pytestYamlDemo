@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-'''
-@time    : 2023/4/12 
-@Author  : zzz
-@File    : config.py
-'''
+
 
 #框架测试环境配置
 Environment='test_environment'
