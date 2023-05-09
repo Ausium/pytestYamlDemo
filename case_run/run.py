@@ -4,7 +4,7 @@ from utils.extract_data import extract_data
 from utils.assertUtil import RespondAssert
 from utils.logger import logger
 
-def case_run(case_data):
+def case_execute(case_data):
 
     replace_case_data = replace_case(case_data)
     response_data = mq.send_requests(replace_case_data["url"],replace_case_data["method"],replace_case_data["data"])

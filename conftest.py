@@ -48,7 +48,8 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         <p>Successful_rate: {successful}%;</p>
         <p>Running_time: {now_time};</p>
         <p>Totla_time: {duration}s;</p>
+        <a href='http://192.168.20.248:2008/index.html'>测试报告</a>
     </div>
     """
-    report_path = os.path.join(report_dir, "report.html")
-    # send_case_result_email.send_email(subject,res,report_path)
+    # report_path = os.path.join(report_dir, "report.html")
+    # send_case_result_email.send_email(subject,res)

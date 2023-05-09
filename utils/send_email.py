@@ -24,11 +24,11 @@ class SendEmail():
         # 添加邮件正文
         msg.attach(MIMEText(body, 'html', 'utf-8'))
 
-        # 添加邮件附件
-        with open(attachment_path, 'rb') as f:
-            attachment = MIMEApplication(f.read(), _subtype='html')
-            attachment.add_header('Content-Disposition', 'attachment', filename='report.html')
-            msg.attach(attachment)
+        # # 添加邮件附件
+        # with open(attachment_path, 'rb') as f:
+        #     attachment = MIMEApplication(f.read(), _subtype='html')
+        #     attachment.add_header('Content-Disposition', 'attachment', filename='report.html')
+        #     msg.attach(attachment)
 
         # 发送邮件
         try:
