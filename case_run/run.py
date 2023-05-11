@@ -13,7 +13,8 @@ def case_execute(case_data):
         extract_data_from_response(replace_case_data["extract_key"],response_data.json())
         
     if replace_case_data.get("assert_response_value") is not None:
-        RespondAssert().assert_response_value(replace_case_data["assert_response_value"],response_data.json())
+        RespondAssert().assert_response_value(replace_case_data["assert_response_value"],response_data,case_data)
+
     else:
         logger.info("该用例不存在assert_response_value字段!")
 

@@ -6,8 +6,10 @@ from _pytest import terminal
 from utils.get_path import execute_result_dir
 from utils.send_email import send_case_result_email
 from utils.get_path import report_dir
+from utils.extract_data import FAILED_CASE_LIST
 
- 
+
+
 def pytest_terminal_summary(terminalreporter, exitstatus, config):
     '''收集测试结果'''
     # print(terminalreporter.stats)
@@ -51,5 +53,28 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         <a href='http://192.168.20.248:2008/index.html'>测试报告</a>
     </div>
     """
+    html_title = '<table border="1" bordercolor="#c8c9cc" width=%s \
+        cellpadding="5" cellspacing="0" "style=""微软雅黑",Helvetica,\
+        Arial,sans-serif;font-weight:bold;font-size:14px;">\
+        <tr><td colspan="3" bgcolor="#e1e4eb" style="font-weight:bold" border:none;\
+        font-size:16px;padding-bottom:16px">%s</td>\
+        </tr>' % (1200, '1、用例执行结果统计')
+    header = ['接口名称','http_code','接口响应结果']
+    html_header = '<tr>'
+    for header in header:
+        html_header += '<td style="font-weight:bold">%s\
+                </td>' % (header)
+    html_header += '</tr>'
+    
+    content = ''
+    for item in FAILED_CASE_LIST:
+        content += '<tr>'
+        for value in item:
+            content += '<td>%s</td>' % (value)
+        content += '</tr>'
+    
+    res = html_title + html_header + content
+
+
     # report_path = os.path.join(report_dir, "report.html")
-    # send_case_result_email.send_email(subject,res)
+    send_case_result_email.send_email(subject,res)

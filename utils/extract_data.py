@@ -1,4 +1,9 @@
 
+
+
+# 保存执行失败的数据
+FAILED_CASE_LIST = []
+
 # 存储全局变量 - 接口返回值中提取的
 class ExtractData:
     user_name = "chenzanxu"
