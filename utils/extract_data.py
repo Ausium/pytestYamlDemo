@@ -1,8 +1,9 @@
 
 
 
-# 保存执行失败的数据
-FAILED_CASE_LIST = []
+
+FAILED_CASE_LIST = []      # 保存执行失败的数据
+TEST_RESULT = []           # 保存测试结果
 
 # 存储全局变量 - 接口返回值中提取的
 class ExtractData:

@@ -49,6 +49,7 @@ class RespondAssert():
             logger.info("断言结果列表:{}".format(check_res))
             FAILED_CASE = []
             FAILED_CASE.append(case_data['case_title'])
+            FAILED_CASE.append(case_data['url'])
             FAILED_CASE.append(response_data.status_code)
             FAILED_CASE.append(response_data.json())
             FAILED_CASE_LIST.append(FAILED_CASE)
