@@ -24,11 +24,11 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     now_time = time.strftime("%Y-%m-%d %H:%M:%S")
     duration = time.time() - terminalreporter._sessionstarttime
     case_execute_result = []
+    case_execute_result.append(now_time)
     case_execute_result.append(total)
     case_execute_result.append(passed)
     case_execute_result.append(failed)
     case_execute_result.append(successful)
-    case_execute_result.append(now_time)
     case_execute_result.append(duration)
     TEST_RESULT.append(case_execute_result)
 
@@ -56,5 +56,5 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     table_content = FAILED_CASE_LIST
     table_header = ['接口名称','接口地址','http_code','接口响应结果']
     _html_table += make_html_table(table_title,table_header,table_content)
-    # report_path = os.path.join(report_dir, "report.html")
-    send_case_result_email.send_email(subject,_html_table)
+    report_path = os.path.join(report_dir, "report.html")
+    send_case_result_email.send_email(subject,_html_table,report_path)

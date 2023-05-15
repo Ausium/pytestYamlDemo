@@ -10,7 +10,7 @@ class SendEmail():
     def __init__(self):
         self.sender_email = 'chenzanxu@unity-drive.com'
         self.sender_password = 'tHTECYEP9Lvdh4et'
-        self.recipient_email = 'chenzanxu@unity-drive.com'
+        self.recipient_email = ['chenzanxu@unity-drive.com','jiangzhiqiang@unity-drive.com']
 
     #发送用例执行后的邮件
     def send_email(self, subject, body,attachment_path=None):
@@ -18,17 +18,17 @@ class SendEmail():
         # 创建邮件容器
         msg = MIMEMultipart()
         msg['From'] = self.sender_email
-        msg['To'] = self.recipient_email
+        msg['To'] = ','.join(self.recipient_email)
         msg['Subject'] = subject
         smtp_server = 'smtp.exmail.qq.com'
         # 添加邮件正文
         msg.attach(MIMEText(body, 'html', 'utf-8'))
-        
+
         # # 添加邮件附件
-        # with open(attachment_path, 'rb') as f:
-        #     attachment = MIMEApplication(f.read(), _subtype='html')
-        #     attachment.add_header('Content-Disposition', 'attachment', filename='report.html')
-        #     msg.attach(attachment)
+        with open(attachment_path, 'rb') as f:
+            attachment = MIMEApplication(f.read(), _subtype='html')
+            attachment.add_header('Content-Disposition', 'attachment', filename='report.html')
+            msg.attach(attachment)
 
         # 发送邮件
         try:

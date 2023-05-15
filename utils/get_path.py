@@ -14,7 +14,7 @@ testdata_dir = os.path.join(basedir, "testdata")
 log_dir = os.path.join(basedir, "outputs", "logs")
 
 # 报告路径
-report_dir = os.path.join(basedir, "outputs", "reports")
+report_dir = os.path.join(basedir, "outputs", "report")
 
 #用例执行结果路径
 execute_result_dir = os.path.join(basedir, "outputs", "execute_result")
