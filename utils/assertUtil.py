@@ -47,15 +47,16 @@ class RespondAssert():
         if False in check_res:
             logger.error("断言失败！")
             logger.info("断言结果列表:{}".format(check_res))
-            FAILED_CASE = []
-            FAILED_CASE.append(case_data['case_title'])
-            FAILED_CASE.append(case_data['url'])
-            FAILED_CASE.append(response_data.status_code)
-            FAILED_CASE.append(response_data.json())
-            FAILED_CASE_LIST.append(FAILED_CASE)
-            FAILED_CASE = []
+            
             raise AssertionError
         else:
+            failed_case = []
+            failed_case.append(case_data['case_title'])
+            failed_case.append(case_data['url'])
+            failed_case.append(response_data.status_code)
+            failed_case.append(response_data.json())
+            FAILED_CASE_LIST.append(failed_case)
+            failed_case = []
             logger.info("断言结果列表:{}".format(check_res))
             logger.info("所有断言成功！")
             

@@ -10,7 +10,7 @@ class SendEmail():
     def __init__(self):
         self.sender_email = 'chenzanxu@unity-drive.com'
         self.sender_password = 'tHTECYEP9Lvdh4et'
-        self.recipient_email = ['chenzanxu@unity-drive.com','jiangzhiqiang@unity-drive.com']
+        self.recipient_email = ['chenzanxu@unity-drive.com','']
 
     #发送用例执行后的邮件
     def send_email(self, subject, body,attachment_path=None):

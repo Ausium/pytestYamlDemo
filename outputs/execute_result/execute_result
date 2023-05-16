@@ -1,7 +1,7 @@
 用例执行结果如下:
 Total: 2;
-Passed: 0;
-Failed: 2;
-Successful_rate: 0.00%;
-Running_time: 2023-05-15 16:55:01;
-Totla_time: 0.38 s;
+Passed: 2;
+Failed: 0;
+Successful_rate: 100.00%;
+Running_time: 2023-05-16 16:08:11;
+Totla_time: 0.28 s;

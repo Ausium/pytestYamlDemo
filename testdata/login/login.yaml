@@ -6,7 +6,7 @@
   data:
       {
     "ID": "chenzanxu",
-    "secret": "",
+    "secret": "25d55ad283aa400af464c76d713c07ad",
     "type": random_number(10)
 }
   extract_key:
@@ -17,7 +17,7 @@
     expected: 1
     assert_type: equals_assert
 
-用户登录成1:
+用户登录成功1:
   url: api/v1/pub/login/3rd
   method: POST
   remark: random_number(10)
@@ -25,7 +25,7 @@
   data:
       {
     "ID": "chenzanxu",
-    "secret": "",
+    "secret": "25d55ad283aa400af464c76d713c07ad",
     "type": random_number(10)
 }
   extract_key:
