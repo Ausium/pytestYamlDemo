@@ -46,22 +46,24 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     subject = '自动化用例执行结果'
     _html_table = '<h2>自动化用例执行结果</h2>'
     _html_table += """
-    <table style="border-collapse: collapse; width: 100%; max-width: 1200px; table-layout: fixed;" border="0" cellpadding="0" cellspacing="0" >
+<table style="border-collapse: collapse; width: 100%; max-width: 1200px;table-layout: fixed;" border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 10%; word-break: break-all;">单元格1</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 10%; word-break: break-all;">单元格2</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 10%; word-break: break-all;">单元格1</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 10%; word-break: break-all;">单元格2</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 20%; word-break: break-all;">单元格1</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc; width: 50%; word-break: break-all;">单元格2</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 1</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 2</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 3</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 4</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 5</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 6</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 40%;">Cell 7</td>
   </tr>
   <tr>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;">单元格3</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;">单元格4</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;">单元格3</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;">单元格4</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;">单元格3</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc; word-break: break-all;" word-break: break-all;>Cell {'data': {'access_token': 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJleHAiOjE2ODYwMjE1OTMsImlhdCI6MTY4NDIwNzE5MywibmJmIjoxNjg0MjA3MTkzLCJzdWIiOiJhNzk3YmVhNS01N2JkLTRkZDctYjEwYS05YTM4YjM5MmY5OGQ6Y2hlbnphbnh1OnRydWUifQT2x9fThi2vI-9E7nuFNhJdy-CPYcm82aEF-O8B_vIMkIJORsyl15Psf_gSylRdGfY4Buqwl8R8Z0ZJErmSAKyQ',</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 3</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 4</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 5</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 6</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 7</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 8</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;text-align: center;">Cell 9 'data': {'access_token':'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJleHAiOjE2ODYwMzIyNTQsImlhdCI6MTY4NDIxNzg1NCwibmJmIjoxNjg0MjE3ODU0LCJzdWIiOiJhNzk3YmVhNS01N2JkLTRkZDctYjEwYS05YTM4YjM5MmY5OGQ6Y2hlbnphbnh1OnRydWUifQiUSYgBQTMbUi49nBrQDHmTKbXhRBF39TyzRr3r9Veb7CEQwV4qIdorma0x3iwWvxoWOkV5RjDwGhiiNknOUtuQ', 'token_type': 'Bearer'</td>
   </tr>
 </table>
     """
