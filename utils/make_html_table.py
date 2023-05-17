@@ -1,28 +1,35 @@
 
 
-def make_html_table(table_title,table_header,table_content):
-    table_title = '<table border="1" bordercolor="#c8c9cc" width: 100%%; max-width: 1200px; \
-        cellpadding="5" cellspacing="0" "style=""微软雅黑",Helvetica,\
-        Arial,sans-serif;font-weight:bold;font-size:14px; table-layout:fixed">\
-        <tr><td colspan="8" bgcolor="#e1e4eb" style="font-weight:bold" border:none;\
-        font-size:16px;padding-bottom:16px">%s</td>\
-        </tr>' % (table_title)
+def make_html_table(title,header,content):
+    table_msg = '<table border="1" bordercolor="#c8c9cc"; cellpadding="7" cellspacing="0"; style="table-layout: fixed; font-size:14px;width: 1200px;border-collapse: collapse;">'
+        
     
-    html_header = '<tr>'
-    for header in table_header:
-        if header == '接口响应结果':
-            html_header += '<td style="text-align: center; background-color: #f2f2f2; border: 1px solid #ccc;font-weight:bold; width:50%%;">%s\
-                </td>' % (header)
+    table_msg += '<colgroup>'
+    colspan_num = 0
+    for col in header:
+        colspan_num += 1
+        if col == '接口响应结果':
+            table_msg += '<col style="width: 40%;">'
         else:
-            html_header += '<td style="text-align: center; background-color: #f2f2f2; border: 1px solid #ccc;font-weight:bold; width:10%%;">%s\
-                </td>' % (header)
-    html_header += '</tr>'
-    
-    content = ''
-    for item in table_content:
-        content += '<tr>'
-        for value in item:
-            content += '<td word-break: break-all;>%s</td>' % (value)
-        content += '</tr>'
+            table_msg += '<col>'
+    table_msg += '</colgroup>'
 
-    return table_title + html_header + content + '<br>'
+    table_title = '<tr><td colspan="%s" style="padding: 15px;font-weight:bold"\
+        font-size:18px;padding-bottom:16px">%s</td>\
+        </tr>' % (colspan_num,title)
+
+    table_header = '<tr>'
+    for item in header:
+        table_header += '<td style="padding: 10px;text-align: center; background-color: #e1e4eb; border: 1px solid #ccc;font-weight:bold;">%s\
+        </td>' % (item)
+    table_header += '</tr>'
+    
+    table_content = ''
+    for item in content:
+        table_content += '<tr>'
+        for value in item:
+            table_content += '<td style="text-align: center;padding: 10px; border: 1px solid #ccc;word-break: break-all;">%s</td>' % (value)
+        table_content += '</tr>'
+    table_content += '</table>'
+
+    return table_msg + table_title + table_header + table_content + '<br>'
