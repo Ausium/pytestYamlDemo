@@ -1,11 +1,11 @@
-# pytestDemo
+# ApiAuto
 
 本项目实现接口自动化的技术选型：**Python+Requests+Pytest+YAML+pytest-html** 
 ## 项目说明
 
 本项目在实现过程中，把整个项目拆分成请求方法封装、HTTP接口封装、关键字封装、测试用例等模块。
 
-首先利用Python把HTTP接口封装成Python接口，接着把这些Python接口组装成一个个的关键字，再把关键字组装成测试用例，而测试数据则通过YAML文件进行统一管理，然后再通过Pytest测试执行器来运行这些脚本，并结合pytest-html输出测试报告。
+首先利用Python把HTTP接口封装成Python接口，测试数据则通过YAML文件进行统一管理，然后再通过Pytest测试执行器来运行这些脚本，并结合pytest-html输出测试报告。
 
 后续再对接口自动化进行Jenkins持续集成。
 

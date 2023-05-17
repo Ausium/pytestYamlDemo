@@ -3,7 +3,6 @@
 def make_html_table(title,header,content):
     table_msg = '<table border="1" bordercolor="#c8c9cc"; cellpadding="7" cellspacing="0"; style="table-layout: fixed; font-size:14px;width: 1200px;border-collapse: collapse;">'
         
-    
     table_msg += '<colgroup>'
     colspan_num = 0
     for col in header:

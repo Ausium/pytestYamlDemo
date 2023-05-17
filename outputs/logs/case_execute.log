@@ -3626,3 +3626,16 @@ True
 2023-05-17 22:53:12,092 case_execute INFO assertUtil.py [line:60] 断言结果列表:[True]
 2023-05-17 22:53:12,092 case_execute INFO assertUtil.py [line:61] 所有断言成功！
 2023-05-17 22:53:12,099 case_execute INFO test_case.py [line:23] 用例名称:用户登录成功1,该用例属于testdata/login/login.yaml文件
+2023-05-17 23:09:21,136 case_execute INFO read_file.py [line:87] 执行的用例文件为:['testdata/login/login.yaml']
+2023-05-17 23:09:21,284 case_execute INFO replace.py [line:19] 提取的用例标识符:[]
+2023-05-17 23:09:21,451 case_execute INFO assertUtil.py [line:34] 比对2个值是否相等。
+2023-05-17 23:09:21,451 case_execute INFO assertUtil.py [line:35] 比对结果为：True
+2023-05-17 23:09:21,452 case_execute INFO assertUtil.py [line:60] 断言结果列表:[True]
+2023-05-17 23:09:21,452 case_execute INFO assertUtil.py [line:61] 所有断言成功！
+2023-05-17 23:09:21,459 case_execute INFO test_case.py [line:23] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+2023-05-17 23:09:21,464 case_execute INFO replace.py [line:19] 提取的用例标识符:[]
+2023-05-17 23:09:21,675 case_execute INFO assertUtil.py [line:34] 比对2个值是否相等。
+2023-05-17 23:09:21,675 case_execute INFO assertUtil.py [line:35] 比对结果为：True
+2023-05-17 23:09:21,676 case_execute INFO assertUtil.py [line:60] 断言结果列表:[True]
+2023-05-17 23:09:21,676 case_execute INFO assertUtil.py [line:61] 所有断言成功！
+2023-05-17 23:09:21,682 case_execute INFO test_case.py [line:23] 用例名称:用户登录成功1,该用例属于testdata/login/login.yaml文件
