@@ -46,15 +46,15 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     subject = '自动化用例执行结果'
     _html_table = '<h2>自动化用例执行结果</h2>'
     _html_table += """
-<table style="border-collapse: collapse; width: 100%; max-width: 1200px;table-layout: fixed;" border="0" cellpadding="0" cellspacing="0">
+<table border="1" bordercolor="#c8c9cc"; cellpadding="7" cellspacing="0"; style="table-layout: fixed; font-size:14px;width: 1200px;border-collapse: collapse;" >
   <tr>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 1</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 2</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 3</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 4</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 5</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 10%;">Cell 6</td>
-    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;white-space: nowrap; overflow: hidden;width: 40%;">Cell 7</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 1</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 2</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 3</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 4</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 5</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 10%;">Cell 6</td>
+    <td style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;text-align:center; overflow: hidden;width: 40%;">Cell 7</td>
   </tr>
   <tr>
     <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 3</td>
@@ -63,7 +63,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 6</td>
     <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 7</td>
     <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;">Cell 8</td>
-    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;text-align: center;">Cell 9 'data': {'access_token':'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJleHAiOjE2ODYwMzIyNTQsImlhdCI6MTY4NDIxNzg1NCwibmJmIjoxNjg0MjE3ODU0LCJzdWIiOiJhNzk3YmVhNS01N2JkLTRkZDctYjEwYS05YTM4YjM5MmY5OGQ6Y2hlbnphbnh1OnRydWUifQiUSYgBQTMbUi49nBrQDHmTKbXhRBF39TyzRr3r9Veb7CEQwV4qIdorma0x3iwWvxoWOkV5RjDwGhiiNknOUtuQ', 'token_type': 'Bearer'</td>
+    <td style="padding: 10px; background-color: #fff; border: 1px solid #ccc;word-break: break-all;">Cell 9 'data': {'access_token':'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9eyJleHAiOjE2ODYwMzIyNTQsImlhdCI6MTY4NDIxNzg1NCwibmJmIjoxNjg0MjE3ODU0LCJzdWIiOiJhNzk3YmVhNS01N2JkLTRkZDctYjEwYS05YTM4YjM5MmY5OGQ6Y2hlbnphbnh1OnRydWUifQiUSYgBQTMbUi49nBrQDHmTKbXhRBF39TyzRr3r9Veb7CEQwV4qIdorma0x3iwWvxoWOkV5RjDwGhiiNknOUtuQ', 'token_type': 'Bearer'</td>
   </tr>
 </table>
     """
