@@ -9,7 +9,7 @@ from utils.allure_ import allure_title,allure_step_no
 from utils import logger
 from utils.read_file import ReadFile
 from utils.get_path import testdata_dir
-from case_run.case_execute import case_execute
+from testcases.case_execute import case_execute
 from utils.logger import logger
 
 
