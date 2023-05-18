@@ -15,8 +15,7 @@ def replace_case(case_data):
     case_str = str(case_replace_data)
     regex = r'\${(.*?)}'
     to_be_replace_marks_list = re.findall(regex,case_str)
-    print(to_be_replace_marks_list)
-    logger.info("提取的用例标识符:{}".format(to_be_replace_marks_list))
+    logger.info("提取用例标识符,提取的标识符列表为:{}".format(to_be_replace_marks_list))
     
     if to_be_replace_marks_list:
         for mark in to_be_replace_marks_list:

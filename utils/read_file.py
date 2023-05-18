@@ -83,6 +83,7 @@ class ReadFile():
     @classmethod
     def read_case(cls):
         '''读取case下需要执行的用例文件并返回用例数据'''
+        logger.info("开始读取测试用例文件")
         path_list = cls.file_execute_list()
         logger.info("执行的用例文件为:{}".format(path_list))
         case_data = {}

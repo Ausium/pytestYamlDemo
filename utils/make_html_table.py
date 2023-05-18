@@ -14,12 +14,12 @@ def make_html_table(title,header,content):
     table_msg += '</colgroup>'
 
     table_title = '<tr><td colspan="%s" style="padding: 15px;font-weight:bold"\
-        font-size:18px;padding-bottom:16px">%s</td>\
+        font-size:18px;padding-bottom:16px;border: 2px solid #ccc;">%s</td>\
         </tr>' % (colspan_num,title)
 
     table_header = '<tr>'
     for item in header:
-        table_header += '<td style="padding: 10px;text-align: center; background-color: #e1e4eb; border: 1px solid #ccc;font-weight:bold;">%s\
+        table_header += '<td style="padding: 10px;text-align: center; background-color: #e1e4eb; border: 2px solid #ccc;font-weight:bold;">%s\
         </td>' % (item)
     table_header += '</tr>'
     
@@ -27,7 +27,7 @@ def make_html_table(title,header,content):
     for item in content:
         table_content += '<tr>'
         for value in item:
-            table_content += '<td style="text-align: center;padding: 10px; border: 1px solid #ccc;word-break: break-all;">%s</td>' % (value)
+            table_content += '<td style="text-align: center;padding: 10px; border: 2px solid #ccc;word-break: break-all;">%s</td>' % (value)
         table_content += '</tr>'
     table_content += '</table>'
 

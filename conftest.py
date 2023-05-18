@@ -58,4 +58,4 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     _html_table += make_html_table(table_title,table_header,table_content)
     
     report_path = os.path.join(report_dir, "report.html")
-    send_case_result_email.send_email(subject,_html_table,report_path)
+    # send_case_result_email.send_email(subject,_html_table,report_path)

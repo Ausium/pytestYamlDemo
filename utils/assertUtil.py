@@ -9,8 +9,6 @@ from utils.logger import logger
 from decimal import Decimal
 from utils.extract_data import FAILED_CASE_LIST
 
-
-
 class RespondAssert():
 
     def assert_response_value(self,check_list, response_data,case_data):
@@ -31,22 +29,17 @@ class RespondAssert():
                 actual = actual[0]
             # 与实际结果做比对
             if check["assert_type"] == "equals_assert":
-                logger.info("比对2个值是否相等。")
-                logger.info("比对结果为：{}".format(actual == check["expected"]))
+                logger.info("开始断言预期结果与实际结果是否相等。")
                 check_res.append(actual == check["expected"])
             #包含断言
             elif check["assert_type"] == "contains_assert":
-                logger.info("比对2个值的大小。")
-                logger.info("比对结果为：{}".format(actual > check["expected"]))
-            #结果断言
-            elif check["assert_type"] == "assert_result":
-                logger.info("比对2个值是否相等。")
-                logger.info("比对结果为：{}".format(actual == check["expected"]))
+                logger.info("开始断言实际结果是否包含预期结果。")
                 check_res.append(actual == check["expected"])
             
         if False in check_res:
-            logger.error("断言失败！")
-            logger.info("断言结果列表:{}".format(check_res))
+            
+            logger.info("用例断言结果列表:{}".format(check_res))
+            logger.error("用例断言失败！")
             
             raise AssertionError
         else:
@@ -58,9 +51,10 @@ class RespondAssert():
             FAILED_CASE_LIST.append(failed_case)
             failed_case = []
             logger.info("断言结果列表:{}".format(check_res))
-            logger.info("所有断言成功！")
+            logger.info("用例断言成功！")
             
             return True
+
 respond_assert = RespondAssert()
 
 if __name__ == '__main__':
