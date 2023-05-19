@@ -6,7 +6,7 @@
   data:
       {
     "ID": "chenzanxu",
-    "secret": "25d55ad283aa400af464c76d713c07ad",
+    "secret": "",
     "type": random_number(10)
 }
   extract_key:
@@ -25,7 +25,7 @@
   data:
       {
     "ID": "chenzanxu",
-    "secret": "25d55ad283aa400af464c76d713c07ad",
+    "secret": "",
     "type": random_number(10)
 }
   extract_key:
@@ -35,77 +35,3 @@
     expr: $.status
     expected: 1
     assert_type: equals_assert
-
-
-
-
-    
-
-
-
-
-# ---
-# tests:
-# - case: 登录成功
-#   http:
-#     method: POST
-#     path: api/v1/pub/login/3rd
-#     data:
-#       ID: chenzanxu
-#       secret: 25d55ad283aa400af464c76d713c07ad
-#       type: default
-#   is_run: True
-#   expected:
-#     response:
-#       title: 正在上映的电影-上海
-#       count: 10
-#       start: 0
-# - case: 验证响应中title是"正在上映的电影-北京"
-#   http:
-#     method: GET
-#     path: /v2/movie/in_theaters
-#     headers:
-#       User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
-#     params:
-#       apikey: 0df993c66c0c636e29ecbb5344252a4a
-#       start: 1
-#       count: 5
-#   expected:
-#     response:
-#       title: 正在上映的电影-北京
-#       count: 5
-#       start: 1
-
-
-
-
-
-# 确认账单:
-#   path: /affirm_bill
-#   method: post
-#   remark: 确认账单
-#   is_run: True
-#   data:
-#     {
-#       "affirm_name": "小江",
-#       "bill_no":$.bill_no
-#     }
-#   extract_key:
-#     affirm_name: $.bill_info.affirm_name
-#   assert_expression:
-#     ['"小江"=="$.bill_info.affirm_name"']
-
-# 核销账单:
-#   path: /write_off_bill
-#   method: post
-#   remark: 核销账单
-#   is_run: True
-#   data:
-#     {
-#       "affirm_name": $.affirm_name,
-#       "bill_no":$.bill_no,
-#       "create_name":$.create_name
-#     }
-#   extract_key:
-#   assert_expression:
-#     ['"小江"=="$.bill_info.affirm_name"','"小江"=="$.bill_info.create_name"',]

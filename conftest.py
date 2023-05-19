@@ -44,7 +44,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         fp.write("Running_time: %s;\n" % now_time)
         fp.write("Totla_time: %.2f s;\n" % duration)
     subject = '自动化用例执行结果'
-    _html_table = '<h2>自动化用例执行结果</h2>'
+    _html_table = '<h3>自动化用例执行结果</h3>'
     # _html_table += """"""
     table_title = '一、用例执行结果统计'
     table_content = TEST_RESULT
@@ -58,4 +58,4 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     _html_table += make_html_table(table_title,table_header,table_content)
     
     report_path = os.path.join(report_dir, "report.html")
-    # send_case_result_email.send_email(subject,_html_table,report_path)
+    send_case_result_email.send_email(subject,_html_table,report_path)

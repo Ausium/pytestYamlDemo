@@ -67,7 +67,7 @@ class ReadFile():
             for exclude_item in exclude_file:
                 for item in execute_file_list:
                     if exclude_item in item:
-                        print("排除的执行文件是：{}".format(item))
+                        logger.info("排除的执行文件是：{}".format(item))
                         execute_file_list.remove(item)
         return execute_file_list
 

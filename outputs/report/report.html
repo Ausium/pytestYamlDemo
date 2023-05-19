@@ -439,7 +439,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 18-May-2023 at 16:10:12 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 18-May-2023 at 20:46:51 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -455,8 +455,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.2</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 0.38 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 0.71 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -467,37 +467,47 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">testcases/test_case.py::test_main[case_data0]</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testcases/test_case.py::test_main[case_data1]</td>
+          <td class="col-duration">0.10</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>排除的执行文件是：testdata/car_manege/car.yaml
-<br/> ------------------------------Captured stderr call------------------------------ <br/>2023-05-18 16:10:11,875 case_execute INFO replace.py [line:18] 提取用例标识符,提取的标识符列表为:[]
-2023-05-18 16:10:11,875 case_execute INFO requests.py [line:43] 开始请求api/v1/pub/login/3rd接口
-2023-05-18 16:10:11,986 case_execute INFO requests.py [line:45] 接口请求成功
-2023-05-18 16:10:11,986 case_execute INFO assertUtil.py [line:32] 开始断言预期结果与实际结果是否相等。
-2023-05-18 16:10:11,986 case_execute INFO assertUtil.py [line:53] 断言结果列表:[True]
-2023-05-18 16:10:11,986 case_execute INFO assertUtil.py [line:54] 用例断言成功！
-2023-05-18 16:10:11,990 case_execute INFO test_case.py [line:21] 用例名称:用户登录成功,该用例属于testdata/login/login.yaml文件
+            <div class="log">case_data = {&#x27;assert_response_value&#x27;: [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}], &#x27;case_title&#x27;: &#x27;用户登录成功...: &#x27;chenzanxu&#x27;, &#x27;secret&#x27;: &#x27;&#x27;, &#x27;type&#x27;: &#x27;random_number(10)&#x27;}, &#x27;extract_key&#x27;: {&#x27;access_token&#x27;: &#x27;$.data.access_token&#x27;}, ...}<br/><br/>    @pytest.mark.parametrize(&quot;case_data&quot;,ReadFile.read_case())<br/>    def test_main(case_data):<br/>    <br/>&gt;       case_execute(case_data)<br/><br/>testcases\test_case.py:19: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>testcases\case_execute.py:16: in case_execute<br/>    RespondAssert().assert_response_value(replace_case_data[&quot;assert_response_value&quot;],response_data,case_data)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utils.assertUtil.RespondAssert object at 0x000001D021101F40&gt;, check_list = [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}]<br/>response_data = &lt;Response [400]&gt;<br/>case_data = {&#x27;assert_response_value&#x27;: [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}], &#x27;case_title&#x27;: &#x27;用户登录成功...: &#x27;chenzanxu&#x27;, &#x27;secret&#x27;: &#x27;&#x27;, &#x27;type&#x27;: &#x27;random_number(10)&#x27;}, &#x27;extract_key&#x27;: {&#x27;access_token&#x27;: &#x27;$.data.access_token&#x27;}, ...}<br/><br/>    def assert_response_value(self,check_list, response_data,case_data):<br/>        &quot;&quot;&quot;<br/>        :param check_list: 从yaml当中，读取出来的断言列。<br/>        :param response_data: 接口请求之后的响应数据，是字典类型。<br/>        :case_data  用例数据<br/>        :return: None<br/>        &quot;&quot;&quot;<br/>        # 所有断言的比对结果列表<br/>        check_res = []<br/>    <br/>        for check in check_list:<br/>    <br/>            # 通过jsonpath表达式，从响应结果当中拿到了实际结果<br/>            actual = jsonpath.jsonpath(response_data.json(), check[&quot;expr&quot;])<br/>            if isinstance(actual, list):<br/>                actual = actual[0]<br/>            # 与实际结果做比对<br/>            if check[&quot;assert_type&quot;] == &quot;equals_assert&quot;:<br/>                logger.info(&quot;开始断言预期结果与实际结果是否相等。&quot;)<br/>                check_res.append(actual == check[&quot;expected&quot;])<br/>            #包含断言<br/>            elif check[&quot;assert_type&quot;] == &quot;contains_assert&quot;:<br/>                logger.info(&quot;开始断言实际结果是否包含预期结果。&quot;)<br/>                check_res.append(actual == check[&quot;expected&quot;])<br/>    <br/>        if False in check_res:<br/>            failed_case = []<br/>            failed_case.append(case_data[&#x27;case_title&#x27;])<br/>            failed_case.append(case_data[&#x27;url&#x27;])<br/>            failed_case.append(response_data.status_code)<br/>            failed_case.append(response_data.json())<br/>            FAILED_CASE_LIST.append(failed_case)<br/>            failed_case = []<br/>            logger.info(&quot;用例断言结果列表:{}&quot;.format(check_res))<br/>            logger.error(&quot;用例断言失败！&quot;)<br/>    <br/>&gt;           raise AssertionError<br/><span class="error">E           AssertionError</span><br/><br/>utils\assertUtil.py:50: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>2023-05-18 20:46:51,723 case_execute INFO replace.py [line:18] 提取用例标识符,提取的标识符列表为:[]
+2023-05-18 20:46:51,723 case_execute INFO requests.py [line:44] 开始请求api/v1/pub/login/3rd接口
+2023-05-18 20:46:51,820 case_execute INFO requests.py [line:46] 接口请求成功
+2023-05-18 20:46:51,821 case_execute INFO assertUtil.py [line:32] 开始断言预期结果与实际结果是否相等。
+2023-05-18 20:46:51,822 case_execute INFO assertUtil.py [line:47] 用例断言结果列表:[False]
+2023-05-18 20:46:51,822 case_execute ERROR assertUtil.py [line:48] 用例断言失败！
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testcases/test_case.py::test_main[case_data2]</td>
+          <td class="col-duration">0.06</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">case_data = {&#x27;assert_response_value&#x27;: [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}], &#x27;case_title&#x27;: &#x27;用户登录成功...: &#x27;chenzanxu&#x27;, &#x27;secret&#x27;: &#x27;&#x27;, &#x27;type&#x27;: &#x27;random_number(10)&#x27;}, &#x27;extract_key&#x27;: {&#x27;access_token&#x27;: &#x27;$.data.access_token&#x27;}, ...}<br/><br/>    @pytest.mark.parametrize(&quot;case_data&quot;,ReadFile.read_case())<br/>    def test_main(case_data):<br/>    <br/>&gt;       case_execute(case_data)<br/><br/>testcases\test_case.py:19: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>testcases\case_execute.py:16: in case_execute<br/>    RespondAssert().assert_response_value(replace_case_data[&quot;assert_response_value&quot;],response_data,case_data)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utils.assertUtil.RespondAssert object at 0x000001D0219C3AF0&gt;, check_list = [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}]<br/>response_data = &lt;Response [400]&gt;<br/>case_data = {&#x27;assert_response_value&#x27;: [{&#x27;assert_type&#x27;: &#x27;equals_assert&#x27;, &#x27;expected&#x27;: 1, &#x27;expr&#x27;: &#x27;$.status&#x27;}], &#x27;case_title&#x27;: &#x27;用户登录成功...: &#x27;chenzanxu&#x27;, &#x27;secret&#x27;: &#x27;&#x27;, &#x27;type&#x27;: &#x27;random_number(10)&#x27;}, &#x27;extract_key&#x27;: {&#x27;access_token&#x27;: &#x27;$.data.access_token&#x27;}, ...}<br/><br/>    def assert_response_value(self,check_list, response_data,case_data):<br/>        &quot;&quot;&quot;<br/>        :param check_list: 从yaml当中，读取出来的断言列。<br/>        :param response_data: 接口请求之后的响应数据，是字典类型。<br/>        :case_data  用例数据<br/>        :return: None<br/>        &quot;&quot;&quot;<br/>        # 所有断言的比对结果列表<br/>        check_res = []<br/>    <br/>        for check in check_list:<br/>    <br/>            # 通过jsonpath表达式，从响应结果当中拿到了实际结果<br/>            actual = jsonpath.jsonpath(response_data.json(), check[&quot;expr&quot;])<br/>            if isinstance(actual, list):<br/>                actual = actual[0]<br/>            # 与实际结果做比对<br/>            if check[&quot;assert_type&quot;] == &quot;equals_assert&quot;:<br/>                logger.info(&quot;开始断言预期结果与实际结果是否相等。&quot;)<br/>                check_res.append(actual == check[&quot;expected&quot;])<br/>            #包含断言<br/>            elif check[&quot;assert_type&quot;] == &quot;contains_assert&quot;:<br/>                logger.info(&quot;开始断言实际结果是否包含预期结果。&quot;)<br/>                check_res.append(actual == check[&quot;expected&quot;])<br/>    <br/>        if False in check_res:<br/>            failed_case = []<br/>            failed_case.append(case_data[&#x27;case_title&#x27;])<br/>            failed_case.append(case_data[&#x27;url&#x27;])<br/>            failed_case.append(response_data.status_code)<br/>            failed_case.append(response_data.json())<br/>            FAILED_CASE_LIST.append(failed_case)<br/>            failed_case = []<br/>            logger.info(&quot;用例断言结果列表:{}&quot;.format(check_res))<br/>            logger.error(&quot;用例断言失败！&quot;)<br/>    <br/>&gt;           raise AssertionError<br/><span class="error">E           AssertionError</span><br/><br/>utils\assertUtil.py:50: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>2023-05-18 20:46:51,897 case_execute INFO replace.py [line:18] 提取用例标识符,提取的标识符列表为:[]
+2023-05-18 20:46:51,897 case_execute INFO requests.py [line:44] 开始请求api/v1/pub/login/3rd接口
+2023-05-18 20:46:51,961 case_execute INFO requests.py [line:46] 接口请求成功
+2023-05-18 20:46:51,961 case_execute INFO assertUtil.py [line:32] 开始断言预期结果与实际结果是否相等。
+2023-05-18 20:46:51,961 case_execute INFO assertUtil.py [line:47] 用例断言结果列表:[False]
+2023-05-18 20:46:51,961 case_execute ERROR assertUtil.py [line:48] 用例断言失败！
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testcases/test_case.py::test_main[case_data1]</td>
-          <td class="col-duration">0.11</td>
+          <td class="col-name">testcases/test_case.py::test_main[case_data0]</td>
+          <td class="col-duration">0.15</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>排除的执行文件是：testdata/car_manege/car.yaml
-<br/> ------------------------------Captured stderr call------------------------------ <br/>2023-05-18 16:10:11,995 case_execute INFO replace.py [line:18] 提取用例标识符,提取的标识符列表为:[]
-2023-05-18 16:10:11,996 case_execute INFO requests.py [line:43] 开始请求api/v1/pub/login/3rd接口
-2023-05-18 16:10:12,110 case_execute INFO requests.py [line:45] 接口请求成功
-2023-05-18 16:10:12,110 case_execute INFO assertUtil.py [line:32] 开始断言预期结果与实际结果是否相等。
-2023-05-18 16:10:12,110 case_execute INFO assertUtil.py [line:53] 断言结果列表:[True]
-2023-05-18 16:10:12,110 case_execute INFO assertUtil.py [line:54] 用例断言成功！
-2023-05-18 16:10:12,113 case_execute INFO test_case.py [line:21] 用例名称:用户登录成功1,该用例属于testdata/login/login.yaml文件
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2023-05-18 20:46:51,562 case_execute INFO replace.py [line:18] 提取用例标识符,提取的标识符列表为:[]
+2023-05-18 20:46:51,562 case_execute INFO requests.py [line:38] 开始请求api/m1/cardevice/cartype/list接口
+2023-05-18 20:46:51,717 case_execute INFO requests.py [line:41] 接口请求成功
+2023-05-18 20:46:51,717 case_execute INFO case_execute.py [line:19] 该用例不存在assert_response_value字段!
+2023-05-18 20:46:51,720 case_execute INFO test_case.py [line:21] 用例名称:查询车型列表,该用例属于testdata/car_manege/car.yaml文件
 <br/></div></td></tr></tbody></table></body></html>

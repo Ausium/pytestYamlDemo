@@ -37,12 +37,6 @@ class RespondAssert():
                 check_res.append(actual == check["expected"])
             
         if False in check_res:
-            
-            logger.info("用例断言结果列表:{}".format(check_res))
-            logger.error("用例断言失败！")
-            
-            raise AssertionError
-        else:
             failed_case = []
             failed_case.append(case_data['case_title'])
             failed_case.append(case_data['url'])
@@ -50,6 +44,11 @@ class RespondAssert():
             failed_case.append(response_data.json())
             FAILED_CASE_LIST.append(failed_case)
             failed_case = []
+            logger.info("用例断言结果列表:{}".format(check_res))
+            logger.error("用例断言失败！")
+            
+            raise AssertionError
+        else:
             logger.info("断言结果列表:{}".format(check_res))
             logger.info("用例断言成功！")
             

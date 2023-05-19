@@ -14,7 +14,7 @@ class MyRequests():
     def __init__(self):
 
         #请求头
-        self.headers = {"Content-type": "application/json"} 
+        self.headers = {"Content-type": "application/json",'Connection':'close'} 
         #读取配置文件中的server
         self.base_url = MyConf(os.path.join(conf_dir,"conf.ini")).get("server","host")
 
@@ -36,6 +36,7 @@ class MyRequests():
         try:
             if method.upper() == "GET":
                 logger.info("开始请求{}接口".format(api_url))
+                requests.packages.urllib3.disable_warnings() 
                 resp = requests.request(method,self.url,params=data,headers=self.headers,verify=False)
                 logger.info("接口请求成功")
                 resp.close()   #关闭，确保不要过多的链接
